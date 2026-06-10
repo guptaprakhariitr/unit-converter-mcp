@@ -1,0 +1,21 @@
+{
+  "$schema": "https://smithery.ai/schema/server.json",
+  "name": "unit-converter-mcp",
+  "displayName": "Unit / Currency / Timezone Converter",
+  "description": "The boring utility every AI agent needs. Convert units (length / mass / volume / area / time / temperature / energy / speed / data / pressure), currencies (live FX), timezones, and dates.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://unit-converter-mcp.prakhar-cognizance.workers.dev",
+  "repository": "https://github.com/guptaprakhariitr/unit-converter-mcp",
+  "categories": ["utility", "developer-tools"],
+  "tags": ["unit-conversion", "currency", "timezone", "fx", "utility"],
+  "transport": { "type": "http", "url": "https://unit-converter-mcp.prakhar-cognizance.workers.dev/mcp" },
+  "auth": { "type": "bearer", "freeTier": { "monthlyCalls": 500, "ratePerMinute": 30 } },
+  "tools": ["convert_unit", "list_units", "convert_currency", "convert_timezone", "date_diff", "list_timezones"],
+  "pricing": { "currency": "USD", "tiers": [
+    { "name": "Free", "price": 0,  "monthlyCalls": 500 },
+    { "name": "Solo", "price": 5,  "monthlyCalls": 5000 },
+    { "name": "Team", "price": 15, "monthlyCalls": 50000 },
+    { "name": "Pro",  "price": 39, "monthlyCalls": 250000 }
+  ] }
+}
