@@ -15,16 +15,16 @@ binding = "USAGE"
 id = "f05b32212b3f4506adb3bd9793977095"
 
 [vars]
-UPGRADE_URL = "https://unit-converter-mcp.prakhar-cognizance.workers.dev/upgrade"
+UPGRADE_URL = "https://unit-converter-mcp.atlasword.workers.dev/upgrade"
 EXCHANGE_BASE = "https://api.exchangerate.host"
 PRODUCT_NAME = "unit-converter-mcp"
 PRODUCT_TAGLINE = "MCP server for AI agents: convert units, currencies, timezones, and date arithmetic."
-PRODUCT_URL = "https://unit-converter-mcp.prakhar-cognizance.workers.dev"
+PRODUCT_URL = "https://unit-converter-mcp.atlasword.workers.dev"
 DODO_PRODUCT_ID_SOLO = "pdt_0NgkYYSXiaZSw5xWQPxTt"
 DODO_PRODUCT_ID_TEAM = "pdt_0NgkYYYVAohwr9V8R7ax3"
 DODO_PRODUCT_ID_PRO  = "pdt_0NgkYYcYkZkW4gXlASBa7"
 FROM_EMAIL = "prakshatechnologies@gmail.com"
 DODO_BASE = "https://live.dodopayments.com"
-CUSTOMER_PORTAL_RETURN_URL = "https://unit-converter-mcp.prakhar-cognizance.workers.dev/account"
+CUSTOMER_PORTAL_RETURN_URL = "https://unit-converter-mcp.atlasword.workers.dev/account"
 
 # Secrets: DODO_API_KEY, DODO_WEBHOOK_SECRET, RESEND_API_KEY (optional), ADMIN_TOKEN
