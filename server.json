@@ -3,7 +3,7 @@
   "name": "io.github.guptaprakhariitr/unit-converter-mcp",
   "title": "Unit & Currency Converter",
   "description": "60+ units, live FX, timezones, and date arithmetic for AI agents.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://unit-converter-mcp.atlasword.workers.dev/",
   "repository": {
     "url": "https://github.com/guptaprakhariitr/unit-converter-mcp",
@@ -13,16 +13,6 @@
     {
       "type": "streamable-http",
       "url": "https://unit-converter-mcp.atlasword.workers.dev/mcp"
-    }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "@insnapsprakhar/unit-converter-mcp",
-      "version": "0.1.0",
-      "transport": {
-        "type": "stdio"
-      }
     }
   ]
 }
