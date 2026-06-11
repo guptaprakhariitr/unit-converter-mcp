@@ -203,3 +203,27 @@ MIT — see [LICENSE](LICENSE).
 - **Live status page:** [https://mcp-hub.atlasword.workers.dev/status](https://mcp-hub.atlasword.workers.dev/status)
 - **Machine-readable status:** [https://mcp-hub.atlasword.workers.dev/status.json](https://mcp-hub.atlasword.workers.dev/status.json)
 - **Source repo:** [https://github.com/guptaprakhariitr/unit-converter-mcp](https://github.com/guptaprakhariitr/unit-converter-mcp)
+
+
+## Install via npm (one-liner)
+
+A thin launcher is published as [`@atlasword/unit-converter-mcp`](https://www.npmjs.com/package/@atlasword/unit-converter-mcp) on npm. No manual URL to copy/paste:
+
+```bash
+npx -y @atlasword/unit-converter-mcp
+```
+
+Or wire it into your MCP client:
+
+```jsonc
+{
+  "mcpServers": {
+    "unit-converter": {
+      "command": "npx",
+      "args": ["-y", "@atlasword/unit-converter-mcp"]
+    }
+  }
+}
+```
+
+The npm package is just a launcher — it shells out to [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) and points it at the hosted endpoint (`https://unit-converter-mcp.atlasword.workers.dev/mcp`).

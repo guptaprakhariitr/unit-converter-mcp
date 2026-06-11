@@ -1,0 +1,66 @@
+# Smithery registry config — https://smithery.ai/docs/build/project-config/smithery-yaml
+# This is an HTTP-transport MCP server; Smithery hosts the listing and proxies
+# clients straight to our Cloudflare Workers endpoint.
+
+name: unit-converter-mcp
+displayName: Unit / Currency / Timezone Converter
+description: |
+  The boring utility every AI agent needs. Convert units (length / mass / volume / area / time / temperature / energy / speed / data / pressure), currencies (live FX), timezones, and dates.
+homepage: https://unit-converter-mcp.atlasword.workers.dev
+repository: https://github.com/guptaprakhariitr/unit-converter-mcp
+license: MIT
+version: "0.1.0"
+
+runtime: container
+
+startCommand:
+  type: http
+  url: https://unit-converter-mcp.atlasword.workers.dev/mcp
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: API key (optional)
+        description: |
+          Bearer token from https://unit-converter-mcp.atlasword.workers.dev/upgrade.
+          Leave blank for the anonymous free tier (~100 calls/month/IP).
+    required: []
+  exampleConfig:
+    apiKey: ""
+  commandFunction: |-
+    (config) => ({
+      type: "http",
+      url: "https://unit-converter-mcp.atlasword.workers.dev/mcp",
+      headers: config.apiKey ? { Authorization: `Bearer ${config.apiKey}` } : {}
+    })
+
+remote:
+  type: http
+  url: https://unit-converter-mcp.atlasword.workers.dev/mcp
+
+categories:
+  - utility
+  - developer-tools
+tags:
+  - unit-conversion
+  - currency
+  - timezone
+  - fx
+  - utility
+
+tools:
+  - name: convert_unit
+  - name: list_units
+  - name: convert_currency
+  - name: convert_timezone
+  - name: date_diff
+  - name: list_timezones
+
+auth:
+  type: bearer
+  required: false
+  description: |
+    Optional. Anonymous free tier works for ~100 calls/month per IP. For higher
+    quotas, grab a key from https://unit-converter-mcp.atlasword.workers.dev/upgrade and pass
+    it as `Authorization: Bearer <key>`.
