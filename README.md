@@ -207,10 +207,10 @@ MIT — see [LICENSE](LICENSE).
 
 ## Install via npm (one-liner)
 
-A thin launcher is published as [`@atlasword/unit-converter-mcp`](https://www.npmjs.com/package/@atlasword/unit-converter-mcp) on npm. No manual URL to copy/paste:
+A thin launcher is published as [`@insnapsprakhar/unit-converter-mcp`](https://www.npmjs.com/package/@insnapsprakhar/unit-converter-mcp) on npm. No manual URL to copy/paste:
 
 ```bash
-npx -y @atlasword/unit-converter-mcp
+npx -y @insnapsprakhar/unit-converter-mcp
 ```
 
 Or wire it into your MCP client:
@@ -220,7 +220,7 @@ Or wire it into your MCP client:
   "mcpServers": {
     "unit-converter": {
       "command": "npx",
-      "args": ["-y", "@atlasword/unit-converter-mcp"]
+      "args": ["-y", "@insnapsprakhar/unit-converter-mcp"]
     }
   }
 }
